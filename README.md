@@ -56,6 +56,3 @@ BlogStack is a modern, responsive, and feature-rich blogging platform built with
 
 Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
 
-## License
-
-[MIT](LICENSE)
