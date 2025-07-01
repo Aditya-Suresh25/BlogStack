@@ -12,11 +12,12 @@ export default function RTE({name, control, label, defaultValue =""}) {
     <Controller
     name={name || "content"}
     control={control}
-    render={({field: {onChange}}) => (
+    render={({field: {onChange, value}}) => (
         <Editor
-          apiKey= {import.meta.env.VITE_TINYMCE_API_KEY}
-        initialValue={defaultValue}
-        init={{
+          apiKey={import.meta.env.VITE_TINYMCE_API_KEY}
+          initialValue={defaultValue}
+          value={value}
+          init={{
             initialValue: defaultValue,
             height: 500,
             menubar: true,
@@ -46,7 +47,7 @@ export default function RTE({name, control, label, defaultValue =""}) {
             "undo redo | blocks | image | bold italic forecolor | alignleft aligncenter bold italic forecolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent |removeformat | help",
             content_style: "body { font-family:Helvetica,Arial,sans-serif; font-size:14px }"
         }}
-        onEditorChange={onChange}
+          onEditorChange={onChange}
         />
     )}
     />

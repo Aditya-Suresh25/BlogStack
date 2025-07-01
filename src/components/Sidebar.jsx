@@ -6,11 +6,12 @@ import NavItem from './NavItem'
 import {Tooltip} from 'react-tooltip'
 import { useDispatch } from 'react-redux'
 import { logout } from '../store/authSlice'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 function Sidebar({ setSidebarWidth }) {
     const [isOpen,setIsOpen] = useState(false)
     const dispatch = useDispatch();
     const navigate = useNavigate();
+    const location = useLocation();
 
     useEffect(() => {
       if (setSidebarWidth) {
@@ -41,6 +42,7 @@ function Sidebar({ setSidebarWidth }) {
                 setIsOpen = {setIsOpen} 
                 path={item.path}
                 handleLogout={handleLogout}
+                isActive={item.path !== 'logout' && location.pathname === item.path}
                 />
             ))}
         </nav>

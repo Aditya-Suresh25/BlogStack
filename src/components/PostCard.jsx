@@ -21,7 +21,7 @@ function PostCard({ $id, title, featuredImage, content }) {
       : content;
 
   return (
-    <div className="w-full bg-white rounded-xl p-4 shadow-md hover:shadow-2xl hover:scale-105 transition-transform duration-300 flex flex-col gap-4">
+    <div className="w-full bg-white rounded-xl p-4 shadow-md hover:shadow-2xl hover:scale-105 transition-transform duration-300 flex flex-col gap-4 overflow-x-hidden">
       <Link to={`/post/${$id}`}>
         <div className="w-full justify-center mb-4">
           <img
