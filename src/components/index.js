@@ -12,6 +12,7 @@ import PostForm from './post-form/PostForm'
 import PostCard from './PostCard'
 import AuthLayout from './AuthLayout'
 import Select from './Select'
+import Sidebar from './Sidebar'
 export {
     Header,
     Footer,
@@ -26,7 +27,6 @@ export {
     PostCard,
     PostForm,
     AuthLayout,
-    Select
-    
-
+    Select,
+    Sidebar
 }

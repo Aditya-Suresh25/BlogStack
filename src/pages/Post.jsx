@@ -36,12 +36,12 @@ export default function Post() {
     return post ? (
         <div className="py-8">
             <Container>
-                <div className="w-full flex justify-center mb-4 relative border rounded-xl p-2">
+                <div className="w-full flex flex-col md:flex-row justify-center mb-4 relative border rounded-xl p-2">
                     <img
                         src={appwriteService.getFilePreview(post.featuredImage).replace("preview", "view") + "&mode=admin"
                         }
                         alt={post.title}
-                        className="rounded-xl"
+                        className="rounded-xl w-full md:w-auto max-w-xs md:max-w-md mx-auto"
                     />
 
                     {isAuthor && (
